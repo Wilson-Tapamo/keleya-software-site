@@ -1,3 +1,23 @@
+"use client";
+
+import {
+  ArrowUpRight,
+  Cloud,
+  Code2,
+  Database,
+  Gauge,
+  Layers3,
+  LayoutDashboard,
+  Monitor,
+  MousePointer2,
+  ShieldCheck,
+  Sparkles,
+  Terminal,
+  Workflow,
+  Zap,
+} from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+
 const services = [
   {
     signal: "OPTIMISER",
@@ -5,6 +25,7 @@ const services = [
     description:
       "Des outils sur mesure qui simplifient les opérations, connectent les équipes et transforment les processus critiques en avantage concurrentiel.",
     tags: ["Automatisation", "Opérations", "Intégrations"],
+    icon: Gauge,
   },
   {
     signal: "LANCER",
@@ -12,6 +33,7 @@ const services = [
     description:
       "De l’idée au marché, nous concevons des expériences web et mobile désirables, utiles et pensées pour grandir.",
     tags: ["Web & mobile", "Expérience produit", "Go-to-market"],
+    icon: Layers3,
   },
   {
     signal: "ACCÉLÉRER",
@@ -19,6 +41,7 @@ const services = [
     description:
       "Des fondations cloud robustes, sécurisées et observables pour soutenir votre croissance sans ralentir votre ambition.",
     tags: ["Cloud", "Data", "Performance"],
+    icon: Cloud,
   },
 ];
 
@@ -64,6 +87,33 @@ const principles = [
   },
 ];
 
+const capabilityCards = [
+  {
+    icon: Workflow,
+    title: "Automatisation",
+    text: "Des flux plus courts, des équipes plus rapides.",
+    signal: "FLOW",
+  },
+  {
+    icon: LayoutDashboard,
+    title: "Interfaces métier",
+    text: "Toute la complexité rendue immédiatement lisible.",
+    signal: "UX/UI",
+  },
+  {
+    icon: Database,
+    title: "Data & intelligence",
+    text: "La bonne information, au bon moment, pour agir.",
+    signal: "DATA",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Cloud fiable",
+    text: "Une architecture prête à grandir en toute confiance.",
+    signal: "SCALE",
+  },
+];
+
 function Brand({ inverse = false }: { inverse?: boolean }) {
   return (
     <a className={`brand${inverse ? " brand--inverse" : ""}`} href="#accueil" aria-label="Keleya — Accueil">
@@ -75,23 +125,256 @@ function Brand({ inverse = false }: { inverse?: boolean }) {
   );
 }
 
+function SplashScreen() {
+  return (
+    <div className="splash" role="status" aria-label="Chargement de l’expérience Keleya">
+      <div className="splash__panel splash__panel--one" aria-hidden="true" />
+      <div className="splash__panel splash__panel--two" aria-hidden="true" />
+      <div className="splash__top">
+        <Brand inverse />
+        <span>INITIALISATION / SYSTÈME</span>
+      </div>
+      <div className="splash__center" aria-hidden="true">
+        <span>K</span>
+        <div className="splash__word">
+          {"KELEYA".split("").map((letter, index) => (
+            <i key={`${letter}-${index}`} style={{ "--letter": index } as React.CSSProperties}>
+              {letter}
+            </i>
+          ))}
+        </div>
+      </div>
+      <div className="splash__bottom">
+        <span>ENGINEERING / EXCELLENCE</span>
+        <div className="splash__progress"><i /></div>
+        <span className="splash__count"><i>000</i><i>100</i></span>
+      </div>
+    </div>
+  );
+}
+
+function DeviceLab() {
+  const stageRef = useRef<HTMLDivElement>(null);
+
+  const handlePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+    const stage = stageRef.current;
+    if (!stage || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const rect = stage.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    stage.style.setProperty("--stage-rx", `${y * -5}deg`);
+    stage.style.setProperty("--stage-ry", `${x * 7}deg`);
+    stage.style.setProperty("--stage-x", `${x * 12}px`);
+    stage.style.setProperty("--stage-y", `${y * 12}px`);
+  };
+
+  const resetStage = () => {
+    const stage = stageRef.current;
+    if (!stage) return;
+    stage.style.setProperty("--stage-rx", "0deg");
+    stage.style.setProperty("--stage-ry", "0deg");
+    stage.style.setProperty("--stage-x", "0px");
+    stage.style.setProperty("--stage-y", "0px");
+  };
+
+  return (
+    <div
+      className="device-stage"
+      ref={stageRef}
+      onPointerMove={handlePointerMove}
+      onPointerLeave={resetStage}
+      role="img"
+      aria-label="Démonstration animée d’un environnement logiciel Keleya"
+    >
+      <div className="device-stage__aura" aria-hidden="true" />
+      <div className="tech-orbit tech-orbit--cloud" aria-hidden="true"><Cloud /></div>
+      <div className="tech-orbit tech-orbit--code" aria-hidden="true"><Code2 /></div>
+      <div className="tech-orbit tech-orbit--spark" aria-hidden="true"><Sparkles /></div>
+
+      <div className="desktop-device">
+        <div className="desktop-device__bezel">
+          <span className="desktop-device__camera" />
+          <div className="product-ui">
+            <aside className="product-ui__sidebar">
+              <span className="product-ui__logo"><Zap /></span>
+              <span className="is-active"><LayoutDashboard /></span>
+              <span><Database /></span>
+              <span><Workflow /></span>
+              <span><ShieldCheck /></span>
+              <span className="product-ui__avatar">KB</span>
+            </aside>
+            <div className="product-ui__main">
+              <div className="product-ui__bar">
+                <div>
+                  <small>WELCOME BACK</small>
+                  <strong>Performance center</strong>
+                </div>
+                <span className="product-ui__action">
+                  <Sparkles /> Generate report
+                </span>
+              </div>
+              <div className="metric-grid">
+                <article>
+                  <span>Revenue flow</span>
+                  <strong>24.8M</strong>
+                  <small>↑ 18.4%</small>
+                </article>
+                <article>
+                  <span>Active systems</span>
+                  <strong>1,284</strong>
+                  <small>Live</small>
+                </article>
+                <article>
+                  <span>Efficiency</span>
+                  <strong>94.2%</strong>
+                  <small>Optimal</small>
+                </article>
+              </div>
+              <div className="dashboard-grid">
+                <article className="chart-card">
+                  <div className="chart-card__head">
+                    <span>Growth trajectory</span>
+                    <small>12 MONTHS</small>
+                  </div>
+                  <div className="bar-chart" aria-hidden="true">
+                    {[38, 52, 46, 68, 58, 77, 66, 84, 72, 91, 82, 100].map((height, index) => (
+                      <i key={index} style={{ "--bar": `${height}%`, "--delay": index } as React.CSSProperties} />
+                    ))}
+                  </div>
+                  <div className="chart-card__labels"><span>JAN</span><span>JUN</span><span>DEC</span></div>
+                </article>
+                <article className="pulse-card">
+                  <div className="pulse-card__head"><span>System pulse</span><i /></div>
+                  <div className="pulse-score">
+                    <strong>98</strong><span>/100</span>
+                  </div>
+                  <div className="pulse-ring" aria-hidden="true"><i /></div>
+                  <small>All services operational</small>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="desktop-device__neck" />
+        <div className="desktop-device__base" />
+      </div>
+
+      <div className="code-float glass-panel">
+        <div className="window-top">
+          <div><i /><i /><i /></div>
+          <span><Terminal /> engine.ts</span>
+          <small>LIVE</small>
+        </div>
+        <pre aria-label="Extrait de code animé"><code>
+          <span><b>const</b> ambition = <em>await</em> keleya.define();</span>
+          <span><b>const</b> product = ambition.toProduct(&#123;</span>
+          <span>  standard: <strong>&quot;world-class&quot;</strong>,</span>
+          <span>  performance: <strong>&quot;built-in&quot;</strong>,</span>
+          <span>  impact: <strong>&quot;measurable&quot;</strong></span>
+          <span>&#125;);</span>
+          <span><em>export default</em> product.scale();</span>
+        </code></pre>
+        <div className="code-float__cursor" aria-hidden="true" />
+      </div>
+
+      <div className="site-float glass-panel">
+        <div className="window-top">
+          <div><i /><i /><i /></div>
+          <span>keleya / launch</span>
+          <small><MousePointer2 /></small>
+        </div>
+        <div className="site-preview">
+          <span className="site-preview__label">DIGITAL PRODUCT / 2026</span>
+          <strong>Move your<br />business <em>forward.</em></strong>
+          <i className="site-preview__sphere" />
+          <span className="site-preview__cta">EXPLORE <ArrowUpRight /></span>
+        </div>
+      </div>
+
+      <div className="phone-device">
+        <div className="phone-device__speaker" />
+        <div className="phone-device__screen">
+          <div className="mobile-top"><span>9:41</span><i /></div>
+          <span className="mobile-kicker">DAILY OVERVIEW</span>
+          <strong>Hello, Keleya.</strong>
+          <div className="mobile-balance">
+            <small>Business pulse</small>
+            <b>84.6%</b>
+            <span>↑ 12.8 today</span>
+          </div>
+          <div className="mobile-actions">
+            <i><Gauge /></i><i><Database /></i><i><Zap /></i>
+          </div>
+          <div className="mobile-list"><i /><i /><i /></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
+  const [showSplash, setShowSplash] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("accueil");
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const splashTimer = window.setTimeout(() => setShowSplash(false), reducedMotion ? 350 : 3300);
+
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    let pointerFrame = 0;
+    const handlePointer = (event: PointerEvent) => {
+      window.cancelAnimationFrame(pointerFrame);
+      pointerFrame = window.requestAnimationFrame(() => {
+        document.documentElement.style.setProperty("--pointer-x", `${event.clientX}px`);
+        document.documentElement.style.setProperty("--pointer-y", `${event.clientY}px`);
+      });
+    };
+    window.addEventListener("pointermove", handlePointer, { passive: true });
+
+    const sections = Array.from(document.querySelectorAll<HTMLElement>("main section[id]"));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible?.target.id) setActiveSection(visible.target.id);
+      },
+      { rootMargin: "-30% 0px -55%", threshold: [0.05, 0.2, 0.5] },
+    );
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      window.clearTimeout(splashTimer);
+      window.cancelAnimationFrame(pointerFrame);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("pointermove", handlePointer);
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <>
+      {showSplash && <SplashScreen />}
+      <div className="ambient-cursor" aria-hidden="true" />
       <a className="skip-link" href="#contenu">
         Aller au contenu
       </a>
 
-      <header className="site-header" aria-label="Navigation principale">
+      <header className={`site-header${scrolled ? " site-header--scrolled" : ""}`} aria-label="Navigation principale">
         <Brand inverse />
         <nav className="site-nav" aria-label="Sections">
-          <a href="#expertise">Expertise</a>
-          <a href="#approche">Approche</a>
-          <a href="#exigence">Exigence</a>
+          <a className={activeSection === "lab" ? "is-active" : ""} href="#lab">Le lab</a>
+          <a className={activeSection === "expertise" ? "is-active" : ""} href="#expertise">Expertise</a>
+          <a className={activeSection === "approche" ? "is-active" : ""} href="#approche">Approche</a>
         </nav>
         <a className="header-cta" href="#contact">
           Démarrer un projet <span aria-hidden="true">↗</span>
         </a>
+        <span className="site-header__progress" aria-hidden="true" />
       </header>
 
       <main id="contenu">
@@ -131,6 +414,23 @@ export default function Home() {
                 </a>
               </div>
             </div>
+
+            <div className="hero-console glass-panel hero-animate hero-animate--five" aria-label="État du studio">
+              <div className="hero-console__top">
+                <span><Monitor /> Keleya operating system</span>
+                <i>LIVE</i>
+              </div>
+              <div className="hero-console__grid">
+                <span><small>ORIGIN</small><strong>CMR</strong></span>
+                <span><small>STANDARD</small><strong>GLOBAL</strong></span>
+                <span><small>FOCUS</small><strong>IMPACT</strong></span>
+              </div>
+              <div className="hero-console__signal" aria-hidden="true">
+                {[32, 54, 38, 71, 48, 86, 58, 92, 64, 100].map((height, index) => (
+                  <i key={index} style={{ "--signal": `${height}%`, "--delay": index } as React.CSSProperties} />
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="hero__index" aria-hidden="true">
@@ -166,6 +466,44 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="digital-lab section-pad" id="lab" aria-labelledby="lab-title">
+          <div className="lab-heading reveal">
+            <div>
+              <span className="mini-label mini-label--light">KELEYA PRODUCT LAB</span>
+              <h2 id="lab-title">Des systèmes que l’on veut <em>utiliser.</em></h2>
+            </div>
+            <div className="lab-heading__copy">
+              <span className="lab-heading__icon"><Monitor /></span>
+              <p>
+                Chaque interface donne une forme claire à la complexité : un code
+                robuste derrière, une expérience évidente devant.
+              </p>
+              <span className="live-pill"><i /> Live product environment</span>
+            </div>
+          </div>
+
+          <DeviceLab />
+
+          <div className="capability-grid">
+            {capabilityCards.map((capability, index) => {
+              const Icon = capability.icon;
+              return (
+                <article className="capability-card glass-panel reveal" key={capability.title}>
+                  <div className="capability-card__top">
+                    <span className="capability-card__icon"><Icon /></span>
+                    <small>{capability.signal} / 0{index + 1}</small>
+                  </div>
+                  <div>
+                    <h3>{capability.title}</h3>
+                    <p>{capability.text}</p>
+                  </div>
+                  <ArrowUpRight className="capability-card__arrow" aria-hidden="true" />
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
         <section className="expertise section-pad" id="expertise" aria-labelledby="expertise-title">
           <div className="section-heading reveal">
             <div>
@@ -179,9 +517,11 @@ export default function Home() {
           </div>
 
           <div className="services">
-            {services.map((service) => (
+            {services.map((service) => {
+              const Icon = service.icon;
+              return (
               <article className="service-row reveal" key={service.title}>
-                <span className="service-row__signal">{service.signal}</span>
+                <span className="service-row__signal"><Icon /> {service.signal}</span>
                 <div className="service-row__main">
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
@@ -195,7 +535,7 @@ export default function Home() {
                   ↗
                 </span>
               </article>
-            ))}
+            )})}
           </div>
         </section>
 
