@@ -1,71 +1,21 @@
 import type { Metadata } from "next";
 import { DM_Sans, IBM_Plex_Mono, Syne } from "next/font/google";
 import "./globals.css";
+import "./design.css";
 
-const display = Syne({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
-});
-
-const body = DM_Sans({
-  variable: "--font-body",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
-
-const mono = IBM_Plex_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
+const display = Syne({ variable: "--font-display", subsets: ["latin"], weight: ["500", "600", "700", "800"] });
+const body = DM_Sans({ variable: "--font-body", subsets: ["latin"], weight: ["400", "500", "600"] });
+const mono = IBM_Plex_Mono({ variable: "--font-mono", subsets: ["latin"], weight: ["400", "500"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://keleya.cm"),
-  title: {
-    default: "Keleya — Ingénierie logicielle",
-    template: "%s — Keleya",
-  },
-  description:
-    "Keleya conçoit des produits numériques, logiciels métier et plateformes évolutives depuis le Cameroun, pour le monde.",
-  keywords: [
-    "développement logiciel",
-    "logiciel métier",
-    "produit numérique",
-    "Cameroun",
-    "ingénierie logicielle",
-  ],
-  icons: {
-    icon: "/keleya-mark-red.png",
-    shortcut: "/keleya-mark-red.png",
-    apple: "/keleya-mark-red.png",
-  },
-  openGraph: {
-    title: "Keleya — Le logiciel comme avantage décisif",
-    description:
-      "Produits numériques et systèmes métier conçus au Cameroun, pour le monde.",
-    type: "website",
-    locale: "fr_CM",
-    siteName: "Keleya",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Keleya — Le logiciel comme avantage décisif",
-    description:
-      "Produits numériques et systèmes métier conçus au Cameroun, pour le monde.",
-  },
+  title: { default: "Keleya — Accélérez votre efficacité avec élégance", template: "%s — Keleya" },
+  description: "Keleya libère le potentiel des organisations par une digitalisation opérationnelle élégante de leurs systèmes.",
+  keywords: ["digitalisation opérationnelle", "création d’applications", "gestion de projets digitaux", "Cameroun", "automatisation"],
+  icons: { icon: "/keleya-mark-red.png", shortcut: "/keleya-mark-red.png", apple: "/keleya-mark-red.png" },
+  openGraph: { title: "Keleya — Accélérez votre efficacité avec élégance", description: "Des systèmes digitaux qui libèrent le potentiel des organisations.", type: "website", locale: "fr_CM", siteName: "Keleya" },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="fr">
-      <body className={`${display.variable} ${body.variable} ${mono.variable}`}>
-        {children}
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="fr"><body className={`${display.variable} ${body.variable} ${mono.variable}`}>{children}</body></html>;
 }
