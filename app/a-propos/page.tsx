@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ArrowUpRight, Compass, Feather, Gauge, Globe2, Sparkles } from "lucide-react";
+import Image from "next/image";
 import { PageHero, PageShell } from "../components/SiteShell";
+import { TeamExperience } from "../components/TeamExperience";
 
 export const metadata: Metadata = { title: "À propos", description: "La vision, la mission et les valeurs de Keleya : efficacité, élégance et excellence." };
 
@@ -10,7 +12,7 @@ export default function AboutPage() {
     <section className="about-manifesto light-section">
       <div className="section-label" data-reveal><span>Notre ADN & vision</span><i /></div>
       <h2 data-reveal>Accélérer votre efficacité<br /><em>avec élégance.</em></h2>
-      <div className="about-origin"><div className="origin-mark" data-reveal><img src="/keleya-mark-red.png" alt="" /><span>KELEYA / 2026</span></div><div className="origin-copy" data-reveal><p className="eyebrow">Pourquoi nous existons</p><p className="lead">Nous sommes convaincus que la technologie doit rendre le travail plus simple, les décisions plus justes et les organisations plus libres d’avancer.</p><p>Keleya accompagne les entreprises et institutions qui veulent transformer leurs opérations, sans sacrifier l’humain, l’élégance ni l’ambition. Nous concevons au Cameroun des solutions pensées pour l’Afrique et prêtes pour le monde.</p></div></div>
+      <div className="about-origin"><div className="origin-mark" data-reveal><Image src="/keleya-mark-red.png" alt="" width="1600" height="1600" /><span>KELEYA / 2026</span></div><div className="origin-copy" data-reveal><p className="eyebrow">Pourquoi nous existons</p><p className="lead">Nous sommes convaincus que la technologie doit rendre le travail plus simple, les décisions plus justes et les organisations plus libres d’avancer.</p><p>Keleya accompagne les entreprises et institutions qui veulent transformer leurs opérations, sans sacrifier l’humain, l’élégance ni l’ambition. Nous concevons au Cameroun des solutions pensées pour l’Afrique et prêtes pour le monde.</p></div></div>
     </section>
     <section className="beliefs dark-section">
       <div className="beliefs-title" data-reveal><p className="eyebrow light">Ce que nous croyons</p><h2>La technologie est un outil.<br /><em>Le progrès est l’objectif.</em></h2></div>
@@ -29,6 +31,7 @@ export default function AboutPage() {
         <article data-reveal><span>03</span><Sparkles /><h3>Excellence</h3><p>Nous cherchons la justesse à chaque étape et considérons la qualité comme une habitude, jamais comme une option.</p></article>
       </div>
     </section>
+    <TeamExperience />
     <section className="africa-statement"><div className="africa-glow" /><p className="eyebrow light">Notre engagement</p><h2 data-reveal>La digitalisation de l’Afrique est une opportunité immense.<br /><em>Et une responsabilité qui nous oblige.</em></h2><a className="button red" href="/contact">Construire avec nous <ArrowUpRight /></a></section>
   </main></PageShell>;
 }
