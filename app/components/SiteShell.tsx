@@ -1,6 +1,8 @@
 "use client";
 
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const links = [
@@ -12,10 +14,10 @@ const links = [
 
 export function Brand() {
   return (
-    <a className="brand" href="/" aria-label="Keleya — Accueil">
-      <img src="/keleya-mark-red.png" alt="" width="84" height="84" />
+    <Link className="brand" href="/" aria-label="Keleya — Accueil">
+      <Image src="/keleya-mark-red.png" alt="" width="84" height="84" />
       <span>Keleya</span>
-    </a>
+    </Link>
   );
 }
 
