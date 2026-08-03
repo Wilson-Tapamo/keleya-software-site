@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // o2switch does not provide vinext's runtime image optimization endpoint.
-  // Keep local assets as direct URLs instead of generating /_vinext/image URLs.
+  // Kept for Next.js compatibility. Vinext currently requires the
+  // `unoptimized` prop on each Image to avoid its /_vinext/image endpoint.
   images: {
     unoptimized: true,
   },

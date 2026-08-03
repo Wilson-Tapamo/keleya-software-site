@@ -42,7 +42,7 @@ function SplashScreen() {
       <div className="splash__panel splash__panel--one" aria-hidden="true" />
       <div className="splash__panel splash__panel--two" aria-hidden="true" />
       <div className="splash__top">
-        <span className="splash__brand"><Image src="/keleya-mark-red.png" alt="" width="84" height="84" priority />Keleya</span>
+        <span className="splash__brand"><Image src="/keleya-mark-red.png" alt="" width="84" height="84" priority unoptimized />Keleya</span>
         <span>INITIALISATION / SYSTÈME</span>
       </div>
       <div className="splash__center" aria-hidden="true">
@@ -186,7 +186,7 @@ export default function Home() {
         <ProcessExperience />
 
         <section className="precision-section light-section">
-          <div className="precision-mark" data-reveal><div className="precision-logo"><Image src="/keleya-mark-black.png" alt="" width="1600" height="1600" /><strong>Keleya</strong></div><span>+ SYS_GEOMETRY / 01</span></div>
+          <div className="precision-mark" data-reveal><div className="precision-logo"><Image src="/keleya-mark-black.png" alt="" width="1600" height="1600" unoptimized /><strong>Keleya</strong></div><span>+ SYS_GEOMETRY / 01</span></div>
           <div className="precision-copy" data-reveal><p className="eyebrow">Notre signature</p><h2>Précision<br /><em>& Vision</em></h2><p>La précision transforme une idée en système fiable. La vision lui donne une direction. Chez Keleya, les deux avancent ensemble.</p><ul><li><Check /> Des décisions guidées par l’usage</li><li><Check /> Une qualité perceptible, du fond à la forme</li><li><Check /> Des solutions pensées pour durer</li></ul></div>
         </section>
 
