@@ -143,7 +143,7 @@ export default function Home() {
           <div className="hero-overlay" /><div className="hero-grid" />
           <div className="home-hero-content">
             <p className="eyebrow light hero-in one"><i /> Digitalisation opérationnelle · Cameroun</p>
-            <h1><span className="hero-in two">Accélérez votre</span><em className="hero-in three">efficacité</em><span className="hero-in four">avec élégance.</span></h1>
+            <h1><span className="hero-in two">Accélérez votre</span><em className="hero-in three">performance</em><span className="hero-in four">avec élégance.</span></h1>
             <div className="hero-lower hero-in five">
               <p>Nous concevons les systèmes digitaux qui libèrent le potentiel de vos équipes et donnent à votre organisation une longueur d’avance.</p>
               <div><a className="button red" href="/contact">Parler de votre projet <ArrowUpRight /></a><a className="text-link light" href="#vision">Découvrir Keleya <ArrowDown /></a></div>
