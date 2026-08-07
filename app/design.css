@@ -133,9 +133,9 @@
   .service-scene{height:23svh;min-height:140px}
 }
 
-/* Mobile hotfixes: prevent horizontal panning and keep the splash word fully visible. */
-html,body,#__next{max-width:100%;overflow-x:hidden}
-.site-header,.home-hero,.page-hero,.light-section,.dark-section,.cta-band,.splash{width:100%;max-width:100vw}
+/* Mobile hotfixes: prevent visual bleed and keep the splash word fully visible. */
+.site-header,.home-hero,.page-hero,.light-section,.dark-section,.cta-band,.splash{width:100%;max-width:100%}
+.home-hero,.page-hero,.light-section,.dark-section,.cta-band{overflow-x:clip}
 
 @media(max-width:680px){
   .splash__center{overflow:visible}

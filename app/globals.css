@@ -2,7 +2,7 @@
 
 :root { color-scheme: light; }
 
-html, body { width: 100%; max-width: 100%; min-height: 100%; overflow-x: hidden; }
+html, body { min-height: 100%; }
 
 body { overflow-x: hidden; }
 
