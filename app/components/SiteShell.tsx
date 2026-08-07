@@ -61,7 +61,7 @@ export function Footer() {
       </div>
       <div className="footer-meta">
         <Brand />
-        <div><small>ÉCRIVEZ-NOUS</small><a href="mailto:hello@keleya.agency">hello@keleya.agency</a></div>
+        <div><small>ÉCRIVEZ-NOUS</small><a href="mailto:contact@keleya.app">contact@keleya.app</a></div>
         <div><small>RETROUVEZ-NOUS</small><a href="#">LinkedIn</a><a href="#">Instagram</a></div>
       </div>
       <div className="footer-bottom"><span>© 2026 Keleya. Tous droits réservés.</span><span>Yaoundé, Cameroun — Pour l’Afrique et le monde.</span></div>

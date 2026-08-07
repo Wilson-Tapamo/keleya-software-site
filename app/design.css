@@ -132,3 +132,12 @@
   .service-universe__copy>p{font-size:.82rem}
   .service-scene{height:23svh;min-height:140px}
 }
+
+/* Mobile hotfixes: prevent horizontal panning and keep the splash word fully visible. */
+html,body,#__next{max-width:100%;overflow-x:hidden}
+.site-header,.home-hero,.page-hero,.light-section,.dark-section,.cta-band,.splash{width:100%;max-width:100vw}
+
+@media(max-width:680px){
+  .splash__center{overflow:visible}
+  .splash__word{width:calc(100vw - 4rem);max-width:calc(100vw - 4rem);justify-content:center;overflow:visible;font-size:clamp(2.8rem,13.2vw,4.25rem);letter-spacing:-.065em;line-height:.9}
+}
