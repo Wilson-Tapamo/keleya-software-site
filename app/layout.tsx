@@ -9,11 +9,11 @@ const mono = IBM_Plex_Mono({ variable: "--font-mono", subsets: ["latin"], weight
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://keleya.cm"),
-  title: { default: "Keleya — Accélérez votre efficacité avec élégance", template: "%s — Keleya" },
+  title: { default: "Keleya — Accélérez votre performance avec élégance", template: "%s — Keleya" },
   description: "Keleya libère le potentiel des organisations par une digitalisation opérationnelle élégante de leurs systèmes.",
   keywords: ["digitalisation opérationnelle", "création d’applications", "gestion de projets digitaux", "Cameroun", "automatisation"],
   icons: { icon: "/keleya-mark-red.png", shortcut: "/keleya-mark-red.png", apple: "/keleya-mark-red.png" },
-  openGraph: { title: "Keleya — Accélérez votre efficacité avec élégance", description: "Des systèmes digitaux qui libèrent le potentiel des organisations.", type: "website", locale: "fr_CM", siteName: "Keleya" },
+  openGraph: { title: "Keleya — Accélérez votre performance avec élégance", description: "Des systèmes digitaux qui libèrent le potentiel des organisations.", type: "website", locale: "fr_CM", siteName: "Keleya" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
