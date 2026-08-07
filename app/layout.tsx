@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: { default: "Keleya — Accélérez votre performance avec élégance", template: "%s — Keleya" },
   description: "Keleya libère le potentiel des organisations par une digitalisation opérationnelle élégante de leurs systèmes.",
   keywords: ["digitalisation opérationnelle", "création d’applications", "gestion de projets digitaux", "Cameroun", "automatisation"],
-  icons: { icon: "/keleya-mark-red.png", shortcut: "/keleya-mark-red.png", apple: "/keleya-mark-red.png" },
+  icons: { icon: "/favicon.png", shortcut: "/favicon.png", apple: "/icon.png" },
   openGraph: { title: "Keleya — Accélérez votre performance avec élégance", description: "Des systèmes digitaux qui libèrent le potentiel des organisations.", type: "website", locale: "fr_CM", siteName: "Keleya" },
 };
 
