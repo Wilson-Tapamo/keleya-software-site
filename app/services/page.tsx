@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Services", description: "Application
 
 export default function ServicesPage() {
   return <PageShell current="/services"><main id="contenu">
-    <PageHero index="02" kicker="Nos services" title="Le digital qui simplifie." accent="L’impact qui se mesure." copy="Des solutions conçues pour vos réalités, adoptées par vos équipes et capables d’accompagner votre croissance." />
+    <PageHero index="03" kicker="Nos services" title="Le digital qui simplifie." accent="L’impact qui se mesure." copy="Des solutions conçues pour vos réalités, adoptées par vos équipes et capables d’accompagner votre croissance." />
     <ServiceUniverse />
     <section className="outcomes dark-section">
       <div className="section-label light" data-reveal><span>Ce que cela change</span><i /></div>
