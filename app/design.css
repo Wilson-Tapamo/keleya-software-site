@@ -40,8 +40,9 @@
 .process-phases{position:absolute;inset:0 var(--k-pad) 0 calc(var(--k-pad) + 3rem);max-width:var(--k-max);margin:auto}.process-phase{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;pointer-events:none;opacity:0;transform:translateY(70px) scale(.985);transition:opacity .42s ease,transform .75s cubic-bezier(.16,1,.3,1)}.process-phase.is-active{pointer-events:auto;opacity:1;transform:translateY(0) scale(1)}.process-phase.is-past{opacity:0;transform:translateY(-70px) scale(.985)}.process-phase small{margin-bottom:2rem;color:rgba(255,255,255,.52);font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em}.process-phase h3{max-width:11ch;margin:0;font-family:var(--font-display);font-size:clamp(4rem,9vw,9.2rem);font-weight:600;letter-spacing:-.078em;line-height:.86}.process-phase p{max-width:42rem;margin:2.5rem 0 0;color:rgba(255,255,255,.58);font-size:clamp(1.05rem,2vw,1.8rem);line-height:1.45}.process-experience--4 .process-phase small,.process-experience--4 .process-phase p{color:rgba(255,255,255,.72)}.process-experience--5 .process-phase small{color:var(--k-red)}.process-experience--5 .process-phase p{color:rgba(0,0,0,.58)}
 .process-stage__bottom{position:absolute;z-index:3;right:var(--k-pad);bottom:clamp(1.4rem,4vh,3rem);left:calc(var(--k-pad) + 3rem);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.5rem;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase}.process-stage__bottom>div{display:flex;gap:.4rem}.process-stage__bottom i{display:block;height:2px;flex:1;background:rgba(255,255,255,.16);transition:background .4s ease,transform .4s ease}.process-stage__bottom i.is-active{background:var(--k-red);transform:scaleY(2)}.process-experience--4 .process-stage__bottom i.is-active{background:#fff}.process-experience--5 .process-stage__bottom i{background:rgba(0,0,0,.15)}.process-experience--5 .process-stage__bottom i.is-active{background:var(--k-red)}
 
-/* Optically align the hero keywords without reducing their height */
-.home-hero h1 .hero-performance{transform:scaleX(.742)}
+/* Preserve the natural word shape; only its mobile size is constrained. */
+.home-hero h1 .hero-performance{transform:none}
+@media(max-width:680px){.home-hero h1 .hero-performance{font-size:min(1em,16vw)}}
 
 /* Complete wordmark in Precision & Vision */
 .precision-logo{z-index:1;display:flex;align-items:center;gap:clamp(.8rem,2vw,1.4rem)}.precision-mark .precision-logo img{width:clamp(80px,12vw,145px);filter:brightness(0)}.precision-logo strong{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,4.5rem);font-weight:600;letter-spacing:-.075em}
@@ -66,3 +67,68 @@
 @media(max-width:1050px){.service-universe__content{grid-template-columns:1fr 1fr;gap:2rem}.service-universe__copy h3{font-size:clamp(3.2rem,6.5vw,5.5rem)}.team-experience__heading{grid-template-columns:1fr 2fr}.team-experience__heading>p:last-child{grid-column:2}.team-member{grid-column:span 6}.team-member--lead{grid-column:span 6}}
 @media(max-width:720px){.service-universe__intro{min-height:65svh}.service-universe__panel{position:relative;height:auto;min-height:100svh}.service-universe__content{width:calc(100% - 2.3rem);grid-template-columns:1fr;gap:1.5rem;align-content:center}.service-universe__copy{padding-top:5rem}.service-universe__copy h3{font-size:clamp(3rem,13vw,4.8rem)}.service-universe__copy>p{font-size:.95rem}.service-universe__visual{transform:none!important}.service-scene{height:34svh;border-radius:20px}.service-universe__edge{display:none}.service-scene__orbit{width:34%}.scene-icon{width:38px;height:38px}.scene-icon svg{width:16px}.engineering-process__heading{top:6rem;left:1.15rem}.engineering-process__heading h2{font-size:clamp(2.6rem,11vw,4rem)}.engineering-process__track{gap:4rem;padding-right:18vw;padding-left:1.15rem}.engineering-process__spacer{width:72vw}.engineering-step{width:82vw;min-height:43vh}.engineering-process__finish{width:80vw}.team-experience__heading{grid-template-columns:1fr;gap:1.5rem}.team-experience__heading>p:last-child{grid-column:auto}.team-member,.team-member--lead{min-height:520px;grid-column:1/-1}.team-member__copy p{opacity:1;transform:none}.team-experience__footer{align-items:flex-start;flex-direction:column}.team-experience__footer i{width:100%}}
 @media(prefers-reduced-motion:reduce){.service-scene__orbit,.window-float,.service-scene__metrics i,.service-scene__pulse,.team-member__signal svg:first-child{animation:none!important}.service-universe__copy,.service-universe__visual{opacity:1!important;transform:none!important}.team-member{transform:none!important}.team-member__scan{display:none}.engineering-process__track{will-change:auto}}
+
+/* 2026 refinement — lighter contrast, warmer charcoal and purposeful geometry */
+:root{--k-ink:#191919;--k-soft:#222;--k-paper:#f7f6f3;--k-red:#eb2038}
+.dark-section,.page-hero,.africa-statement,.team-experience,.engineering-process,.engineering-process__stage{background-color:var(--k-ink)}
+.site-header.is-scrolled{background:rgba(25,25,25,.9)}
+
+/* Home / vision: denser rhythm and more readable supporting copy */
+.vision-section{position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(135deg,#fff 0 62%,#f2f0ec 62%)}
+.vision-section:before{position:absolute;z-index:-1;top:0;right:var(--k-pad);width:clamp(5rem,10vw,9rem);height:clamp(5rem,10vw,9rem);content:"";border-right:1px solid rgba(235,32,56,.35);border-bottom:1px solid rgba(235,32,56,.35)}
+.vision-section .section-label{margin-bottom:clamp(2.8rem,5vw,5rem)}
+.vision-layout{gap:clamp(2.5rem,6vw,7rem);align-items:center}
+.vision-aside p{color:#4e4c49;font-size:clamp(1.05rem,1.3vw,1.22rem);line-height:1.75}
+.value-strip{margin-top:clamp(3.5rem,6vw,6rem);background:rgba(255,255,255,.68)}
+.value-strip small{color:#595754;font-size:clamp(.9rem,1vw,1rem);line-height:1.5}
+
+/* About statement: only the two promise words carry the red accent. */
+.about-manifesto__statement span{color:var(--k-ink)}
+.about-manifesto__statement em{color:var(--k-red)}
+
+/* Signature: the red mark sits in a charcoal disc, like a calibrated seal. */
+.precision-logo{flex-direction:column;gap:1rem}
+.precision-logo__disc{position:static!important;display:grid!important;width:clamp(76px,8vw,104px);height:clamp(76px,8vw,104px);border-radius:50%;place-items:center;background:var(--k-ink);box-shadow:0 0 0 1px rgba(0,0,0,.08),0 18px 45px rgba(9,9,9,.14)}
+.precision-mark .precision-logo__disc img{width:62%;height:62%;object-fit:contain;filter:none}
+.precision-mark>span{max-width:28ch;text-align:center;line-height:1.45;letter-spacing:.08em}
+
+/* CTA: deep wine instead of a flat vivid red, with a restrained direction grid. */
+.cta-band{background:linear-gradient(120deg,#5f1722,#831c2d 58%,#651824)}
+.cta-band:before{position:absolute;inset:0;content:"";opacity:.5;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:clamp(72px,10vw,150px) clamp(72px,10vw,150px);mask-image:linear-gradient(90deg,#000,transparent 78%)}
+.cta-band:after{right:-8vw;bottom:-28vw;border-color:rgba(255,255,255,.25);box-shadow:0 0 0 7vw rgba(255,255,255,.025),0 0 0 14vw rgba(255,255,255,.018)}
+
+@media(max-width:720px){
+  .splash__word{max-width:calc(100vw - 2.2rem);gap:0;font-size:min(16vw,5rem);letter-spacing:-.105em;white-space:nowrap}
+  .vision-section{background:linear-gradient(160deg,#fff 0 78%,#f2f0ec 78%)}
+  .vision-layout{grid-template-columns:1fr;gap:2.2rem}
+  .vision-layout h2{font-size:clamp(3rem,13.5vw,4.7rem)}
+  .vision-aside{padding-left:1.2rem}
+  .vision-aside p{font-size:1.08rem}
+  .value-strip{margin-top:3rem}
+  .value-strip div{min-height:150px;padding:1.6rem 1.1rem}
+  .value-strip small{font-size:1rem}
+  .precision-section{justify-items:center}
+  .precision-mark{width:min(86vw,390px)}
+  .precision-mark>span{bottom:9%;font-size:.5rem}
+  .precision-copy{width:100%}
+
+  /* Keep the desktop stacked-sticky service choreography on touch screens. */
+  .service-universe__panel{position:sticky;top:0;height:100svh;min-height:100svh}
+  .service-universe__content{height:100%;grid-template-columns:1fr;grid-template-rows:auto minmax(180px,29svh);gap:1rem;align-content:center}
+  .service-universe__copy{padding-top:3.8rem}
+  .service-universe__meta{margin-bottom:1.2rem;padding-bottom:.7rem}
+  .service-universe__copy h3{font-size:clamp(2.65rem,11.5vw,4.2rem)}
+  .service-universe__copy>p{margin-top:1rem;font-size:.95rem;line-height:1.55}
+  .service-universe__copy ul{margin-top:1rem;gap:.4rem}
+  .service-universe__copy li{padding:.45rem .6rem;font-size:.58rem}
+  .service-universe__visual{opacity:var(--service-alpha);transform:translate3d(var(--service-visual-x),0,0) scale(var(--service-scale))!important}
+  .service-scene{height:29svh;min-height:180px}
+}
+
+@media(max-width:720px) and (max-height:720px){
+  .service-universe__content{grid-template-rows:auto minmax(140px,23svh)}
+  .service-universe__copy{padding-top:3rem}
+  .service-universe__copy h3{font-size:clamp(2.2rem,10vw,3.2rem)}
+  .service-universe__copy>p{font-size:.82rem}
+  .service-scene{height:23svh;min-height:140px}
+}

@@ -4,15 +4,15 @@ import Image from "next/image";
 import { PageHero, PageShell } from "../components/SiteShell";
 import { TeamExperience } from "../components/TeamExperience";
 
-export const metadata: Metadata = { title: "À propos", description: "La vision, la mission et les valeurs de Keleya : efficacité, élégance et excellence." };
+export const metadata: Metadata = { title: "À propos", description: "La vision, la mission et les valeurs de Keleya : performance, élégance et excellence." };
 
 export default function AboutPage() {
   return <PageShell current="/a-propos"><main id="contenu">
-    <PageHero index="03" kicker="À propos de Keleya" title="L’ambition africaine." accent="L’exigence sans frontières." copy="Nous créons des systèmes numériques capables d’améliorer le quotidien des organisations et de porter leurs ambitions plus loin." />
+    <PageHero index="02" kicker="À propos de Keleya" title="L’ambition africaine." accent="L’exigence sans frontières." copy="Nous créons des systèmes numériques capables d’améliorer le quotidien des organisations et de porter leurs ambitions plus loin." />
     <section className="about-manifesto light-section">
       <div className="section-label" data-reveal><span>Notre ADN & vision</span><i /></div>
-      <h2 data-reveal>Accélérer votre efficacité<br /><em>avec élégance.</em></h2>
-      <div className="about-origin"><div className="origin-mark" data-reveal><Image src="/keleya-mark-red.png" alt="" width="1600" height="1600" /><span>KELEYA / 2026</span></div><div className="origin-copy" data-reveal><p className="eyebrow">Pourquoi nous existons</p><p className="lead">Nous sommes convaincus que la technologie doit rendre le travail plus simple, les décisions plus justes et les organisations plus libres d’avancer.</p><p>Keleya accompagne les entreprises et institutions qui veulent transformer leurs opérations, sans sacrifier l’humain, l’élégance ni l’ambition. Nous concevons au Cameroun des solutions pensées pour l’Afrique et prêtes pour le monde.</p></div></div>
+      <h2 className="about-manifesto__statement" data-reveal>Accélérez votre <em>performance</em><br /><span>avec</span> <em>élégance.</em></h2>
+      <div className="about-origin"><div className="origin-mark" data-reveal><Image src="/keleya-mark-red.png" alt="" width="1600" height="1600" unoptimized /><span>KELEYA / 2026</span></div><div className="origin-copy" data-reveal><p className="eyebrow">Pourquoi nous existons</p><p className="lead">Nous sommes convaincus que la technologie doit rendre le travail plus simple, les décisions plus justes et les organisations plus libres d’avancer.</p><p>Keleya accompagne les entreprises et institutions qui veulent transformer leurs opérations, sans sacrifier l’humain, l’élégance ni l’ambition. Nous concevons au Cameroun des solutions pensées pour l’Afrique et prêtes pour le monde.</p></div></div>
     </section>
     <section className="beliefs dark-section">
       <div className="beliefs-title" data-reveal><p className="eyebrow light">Ce que nous croyons</p><h2>La technologie est un outil.<br /><em>Le progrès est l’objectif.</em></h2></div>
@@ -26,12 +26,12 @@ export default function AboutPage() {
       <div className="section-label" data-reveal><span>Nos valeurs / 03</span><i /></div>
       <div className="values-intro" data-reveal><p className="eyebrow">Notre boussole</p><h2>Trois exigences.<br /><em>Une seule signature.</em></h2></div>
       <div className="values-list">
-        <article data-reveal><span>01</span><Gauge /><h3>Efficacité</h3><p>Chaque projet doit produire un progrès concret : du temps gagné, une expérience améliorée, une décision facilitée.</p></article>
+        <article data-reveal><span>01</span><Gauge /><h3>Performance</h3><p>Chaque projet doit produire un progrès concret : du temps gagné, une expérience améliorée, une décision facilitée.</p></article>
         <article data-reveal><span>02</span><Feather /><h3>Élégance</h3><p>Nous retirons le bruit, soignons les détails et créons des solutions dont la simplicité inspire confiance.</p></article>
         <article data-reveal><span>03</span><Sparkles /><h3>Excellence</h3><p>Nous cherchons la justesse à chaque étape et considérons la qualité comme une habitude, jamais comme une option.</p></article>
       </div>
     </section>
     <TeamExperience />
-    <section className="africa-statement"><div className="africa-glow" /><p className="eyebrow light">Notre engagement</p><h2 data-reveal>La digitalisation de l’Afrique est une opportunité immense.<br /><em>Et une responsabilité qui nous oblige.</em></h2><a className="button red" href="/contact">Construire avec nous <ArrowUpRight /></a></section>
+    <section className="africa-statement"><div className="africa-glow" /><p className="eyebrow light">Notre engagement</p><h2 data-reveal>La digitalisation de l’Afrique est une opportunité, immense<br /><em>et une responsabilité qui nous oblige.</em></h2><a className="button red" href="/contact">Construire avec nous <ArrowUpRight /></a></section>
   </main></PageShell>;
 }

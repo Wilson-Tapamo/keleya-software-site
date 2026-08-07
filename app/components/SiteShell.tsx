@@ -7,15 +7,15 @@ import { useEffect, useState } from "react";
 
 const links = [
   ["Accueil", "/"],
-  ["Services", "/services"],
   ["À propos", "/a-propos"],
+  ["Services", "/services"],
   ["Contact", "/contact"],
 ];
 
 export function Brand() {
   return (
     <Link className="brand" href="/" aria-label="Keleya — Accueil">
-      <Image src="/keleya-mark-red.png" alt="" width="84" height="84" />
+      <Image src="/keleya-mark-red.png" alt="" width="84" height="84" unoptimized />
       <span>Keleya</span>
     </Link>
   );
