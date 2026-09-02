@@ -2,19 +2,21 @@
 
 import { ArrowUpRight, CircleDot, Sparkles } from "lucide-react";
 import { useRef } from "react";
-
-const team = [
-  { name: "Achille", role: "Coordinateur", initials: "AC", focus: "Aligne la vision, les priorités et l’exécution.", lead: true },
-  { name: "Wilson", role: "Superviseur", initials: "WT", focus: "Transforme l’exigence en systèmes cohérents.", lead: true },
-  { name: "Brandon", role: "Lead developer", initials: "BR", focus: "Conçoit les fondations techniques qui durent." },
-  { name: "Stéphane", role: "Dev full-stack", initials: "ST", focus: "Relie l’expérience aux capacités du produit." },
-  { name: "Ted", role: "Dev full-stack", initials: "TD", focus: "Façonne des interfaces précises et vivantes." },
-  { name: "Daniel", role: "Dev mobile", initials: "DN", focus: "Crée des expériences mobiles fluides et utiles." },
-  { name: "André Marie", role: "Dev mobile", initials: "AM", focus: "Pense chaque interaction pour le terrain." },
-];
+import { useTranslations } from "next-intl";
 
 export function TeamExperience() {
   const sectionRef = useRef<HTMLElement>(null);
+  const t = useTranslations("Team");
+
+  const team = [
+    { name: "Achille", role: t("members.achille.role"), initials: "AC", focus: t("members.achille.focus"), lead: true },
+    { name: "Wilson", role: t("members.wilson.role"), initials: "WT", focus: t("members.wilson.focus"), lead: true },
+    { name: "Brandon", role: t("members.brandon.role"), initials: "BR", focus: t("members.brandon.focus") },
+    { name: "Stéphane", role: t("members.stephane.role"), initials: "ST", focus: t("members.stephane.focus") },
+    { name: "Ted", role: t("members.ted.role"), initials: "TD", focus: t("members.ted.focus") },
+    { name: "Daniel", role: t("members.daniel.role"), initials: "DN", focus: t("members.daniel.focus") },
+    { name: "André Marie", role: t("members.andre.role"), initials: "AM", focus: t("members.andre.focus") },
+  ];
 
   const handlePointerMove = (event: React.PointerEvent<HTMLElement>) => {
     const card = (event.target as HTMLElement).closest<HTMLElement>(".team-member");
@@ -38,11 +40,11 @@ export function TeamExperience() {
   return (
     <section className="team-experience" ref={sectionRef} aria-labelledby="team-title">
       <div className="team-experience__halo" aria-hidden="true" />
-      <div className="section-label light" data-reveal><span>L’équipe / 07 talents</span><i /></div>
+      <div className="section-label light" data-reveal><span>{t("label")}</span><i /></div>
       <div className="team-experience__heading" data-reveal>
-        <p className="eyebrow light">Les personnes derrière la précision</p>
-        <h2 id="team-title">Des regards différents.<br /><em>Une même exigence.</em></h2>
-        <p>Une équipe resserrée, pluridisciplinaire et responsable de bout en bout de la qualité de chaque produit.</p>
+        <p className="eyebrow light">{t("eyebrow")}</p>
+        <h2 id="team-title" dangerouslySetInnerHTML={{ __html: t.raw("title") }} />
+        <p>{t("copy")}</p>
       </div>
       <div className="team-grid" onPointerMove={handlePointerMove} onPointerLeave={resetCard}>
         {team.map((member, index) => (
@@ -52,7 +54,7 @@ export function TeamExperience() {
               <span className="team-member__monogram">{member.initials}</span>
               <span className="team-member__silhouette" aria-hidden="true" />
               <span className="team-member__scan" aria-hidden="true" />
-              <small>PHOTO / À REMPLACER</small>
+              <small>{t("photoPlaceholder")}</small>
             </div>
             <div className="team-member__meta">
               <span>0{index + 1}</span>
@@ -67,7 +69,7 @@ export function TeamExperience() {
           </article>
         ))}
       </div>
-      <div className="team-experience__footer"><span>Coordination</span><i /><span>Design & ingénierie</span><i /><span>Mobile & terrain</span></div>
+      <div className="team-experience__footer"><span>{t("footer1")}</span><i /><span>{t("footer2")}</span><i /><span>{t("footer3")}</span></div>
     </section>
   );
 }
