@@ -1,4 +1,7 @@
+import createNextIntlPlugin from 'next-intl/plugin';
 import type { NextConfig } from "next";
+
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
   // Kept for Next.js compatibility. Vinext currently requires the
@@ -9,4 +12,4 @@ const nextConfig: NextConfig = {
   output: "standalone",
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

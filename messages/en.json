@@ -1,0 +1,234 @@
+{
+  "Metadata": {
+    "title": "Keleya — Accelerate your performance with elegance",
+    "description": "Keleya unlocks the potential of organizations through elegant operational digitization of their systems."
+  },
+  "SplashScreen": {
+    "initialization": "SYSTEM / INITIALIZATION",
+    "engineering": "ENGINEERING / EXCELLENCE"
+  },
+  "HomeHero": {
+    "eyebrow": "Operational Digitization · Cameroon",
+    "title1": "Accelerate your",
+    "title2": "performance",
+    "title3": "with",
+    "title4": "elegance.",
+    "copy": "We design digital systems that unlock your teams' potential and give your organization a competitive edge.",
+    "contact": "Discuss your project",
+    "discover": "Discover Keleya",
+    "stamp1": "DIGITAL",
+    "stamp2": "OPERATIONS"
+  },
+  "Vision": {
+    "label": "01 / Our vision",
+    "title": "Unlocking the potential of organizations through <em>operational</em> digitization of their systems.",
+    "aside1": "The digitization of Africa is not just a great opportunity. It is also a great responsibility.",
+    "aside2": "We create tools grounded in the realities of the field, capable of shining anywhere.",
+    "val1Title": "Efficiency",
+    "val1Text": "Creating visible progress.",
+    "val2Title": "Elegance",
+    "val2Text": "Making the complex obvious.",
+    "val3Title": "Excellence",
+    "val3Text": "Refining every useful detail."
+  },
+  "Expertise": {
+    "label": "02 / Areas of expertise",
+    "intro": "What we do",
+    "title": "From business need<br />to the tool <em>that changes everything.</em>",
+    "items": {
+      "apps": { "tag": "DESIGN", "title": "Web & Mobile Applications", "text": "Smooth and intuitive applications that give your teams and clients a tool they truly enjoy using." },
+      "ops": { "tag": "SIMPLIFY", "title": "Operations Digitization", "text": "We transform slow, repetitive, or scattered tasks into simple, connected, and measurable journeys." },
+      "pm": { "tag": "MANAGE", "title": "Project Design & Management", "text": "From idea to launch, we frame priorities, coordinate stakeholders, and keep the project results-oriented." },
+      "data": { "tag": "ACCELERATE", "title": "Data, Automation & AI", "text": "Dashboards, automation, and relevant AI use cases to make better decisions and save time." }
+    }
+  },
+  "Process": {
+    "label": "03 / Our method",
+    "desc": "A progression <em>without gray areas.</em>",
+    "scroll": "Scroll to advance",
+    "phasePrefix": "Phase",
+    "phases": {
+      "p1": { "title": "Analysis & Framing.", "text": "Understanding your organization, your goals, and daily bottlenecks to target the opportunities that truly matter." },
+      "p2": { "title": "Strategy & Design.", "text": "Transforming needs into a clear, prioritized, and realistic plan, shared by all stakeholders." },
+      "p3": { "title": "Experience Design.", "text": "Designing simple and elegant journeys, tested early to reduce uncertainties and foster adoption." },
+      "p4": { "title": "Custom Creation.", "text": "Building a fast, reliable, and scalable solution, with regular checkpoints and visible results." },
+      "p5": { "title": "Launch & Impact.", "text": "Deploying smoothly, supporting your teams, and measuring gains to improve the solution over time." }
+    }
+  },
+  "Precision": {
+    "mark": "FROM IDEAS TO SYSTEMS THAT MOVE FORWARD",
+    "eyebrow": "Our signature",
+    "title": "Precision<br /><em>& Vision</em>",
+    "copy": "Precision transforms an idea into a reliable system. Vision gives it a direction. At Keleya, both move forward together.",
+    "list1": "Usage-driven decisions",
+    "list2": "Perceptible quality, from core to surface",
+    "list3": "Solutions designed to last"
+  },
+  "Cta": {
+    "eyebrow": "An idea, a bottleneck, an ambition?",
+    "title": "Let's turn it into your<br /><em>next advantage.</em>",
+    "button": "Start the conversation"
+  },
+  "SiteShell": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "headerCta": "Start a project",
+    "footerLead": "Your next advantage starts here",
+    "footerTitle": "Let's build<br /><em>your momentum.</em>",
+    "footerWrite": "WRITE TO US",
+    "footerFind": "FIND US",
+    "footerRights": "© 2026 Keleya. All rights reserved.",
+    "footerLocation": "Yaoundé, Cameroon — For Africa and the world.",
+    "skip": "Skip to content",
+    "scrollCue": "Scroll"
+  },
+  "About": {
+    "meta": "Keleya's vision, mission, and values: performance, elegance, and excellence.",
+    "heroKicker": "About Keleya",
+    "heroTitle": "The African ambition.",
+    "heroAccent": "Excellence without borders.",
+    "heroCopy": "We create digital systems capable of improving the daily lives of organizations and taking their ambitions further.",
+    "manifestoLabel": "Our DNA & vision",
+    "manifestoStatement": "Accelerate your <em>performance</em><br /><span>with</span> <em>elegance.</em>",
+    "originEyebrow": "Why we exist",
+    "originLead": "We are convinced that technology should make work simpler, decisions more accurate, and organizations freer to advance.",
+    "originText": "Keleya supports companies and institutions that want to transform their operations, without sacrificing the human element, elegance, or ambition. We design solutions in Cameroon, conceived for Africa and ready for the world.",
+    "beliefsEyebrow": "What we believe",
+    "beliefsTitle": "Technology is a tool.<br /><em>Progress is the goal.</em>",
+    "beliefsList": {
+      "b1": { "tag": "THE MISSION", "title": "Unlock potential", "text": "Transform work systems to make every team more capable, faster, and more serene." },
+      "b2": { "tag": "THE RESPONSIBILITY", "title": "Grow African digital", "text": "Create solutions rooted in our realities, inclusive, ambitious, and solid enough to become benchmarks." },
+      "b3": { "tag": "THE PROMISE", "title": "Make the complex simple", "text": "Listen before building, clarify before accelerating, and always deliver an obvious experience." }
+    },
+    "valuesLabel": "Our values / 03",
+    "valuesEyebrow": "Our compass",
+    "valuesTitle": "Three requirements.<br /><em>One single signature.</em>",
+    "valuesList": {
+      "v1": { "title": "Performance", "text": "Every project must produce concrete progress: time saved, an improved experience, an easier decision." },
+      "v2": { "title": "Elegance", "text": "We remove the noise, refine the details, and create solutions whose simplicity inspires trust." },
+      "v3": { "title": "Excellence", "text": "We seek accuracy at every step and treat quality as a habit, never an option." }
+    },
+    "africaEyebrow": "Our commitment",
+    "africaTitle": "The digitization of Africa is a tremendous opportunity<br /><em>and a responsibility that binds us.</em>",
+    "africaButton": "Build with us"
+  },
+  "Team": {
+    "label": "The team / 07 talents",
+    "eyebrow": "The people behind the precision",
+    "title": "Different perspectives.<br /><em>The same high standard.</em>",
+    "copy": "A tight-knit, multidisciplinary team responsible from end to end for the quality of each product.",
+    "members": {
+      "achille": { "role": "Coordinator", "focus": "Aligns vision, priorities, and execution." },
+      "wilson": { "role": "Supervisor", "focus": "Transforms requirements into cohesive systems." },
+      "brandon": { "role": "Lead developer", "focus": "Designs technical foundations that last." },
+      "stephane": { "role": "Full-stack Dev", "focus": "Connects the experience to product capabilities." },
+      "ted": { "role": "Full-stack Dev", "focus": "Shapes precise and vibrant interfaces." },
+      "daniel": { "role": "Mobile Dev", "focus": "Creates smooth and useful mobile experiences." },
+      "andre": { "role": "Mobile Dev", "focus": "Designs every interaction for the field." }
+    },
+    "photoPlaceholder": "PHOTO / TO BE REPLACED",
+    "footer1": "Coordination",
+    "footer2": "Design & engineering",
+    "footer3": "Mobile & field"
+  },
+  "Services": {
+    "meta": "Applications, operations digitization, product design, automation, and digital support by Keleya.",
+    "heroKicker": "Our services",
+    "heroTitle": "Digital that simplifies.",
+    "heroAccent": "Impact that can be measured.",
+    "heroCopy": "Solutions designed for your realities, adopted by your teams, and capable of supporting your growth.",
+    "outcomesLabel": "What this changes",
+    "outcomesTitle": "Less friction.<br />More <em>momentum.</em>",
+    "outcomes": {
+      "o1": { "title": "Smooth operations", "text": "Fewer double entries, less waiting, and no lost information between teams." },
+      "o2": { "title": "Clearer decisions", "text": "The right information becomes readable and available when you need it." },
+      "o3": { "title": "An evolving foundation", "text": "Your solution supports growth without forcing you to start from scratch." }
+    },
+    "ctaEyebrow": "Does your need not fit in a box?",
+    "ctaTitle": "Let's talk about the result<br /><em>you are aiming for.</em>",
+    "ctaButton": "Study my project",
+    "universeLabel": "Expertises / 06",
+    "universeEyebrow": "Comprehensive expertise",
+    "universeTitle": "Your ambition,<br /><em>our playground.</em>",
+    "universeServices": {
+      "apps": { "signal": "CREATION", "title": "Web & Mobile Applications", "text": "Client portals, business applications, and fast, reliable digital products designed around real usage.", "d1": "Business applications", "d2": "Web & mobile products", "d3": "Client portals" },
+      "ops": { "signal": "OPERATIONS", "title": "Process Digitization", "text": "We connect steps, teams, and data to eliminate delays and make your business more fluid.", "d1": "Process audit", "d2": "Automations", "d3": "Internal tools" },
+      "design": { "signal": "EXPERIENCE", "title": "UI/UX Design & Prototyping", "text": "Elegant, accessible, and intuitive interfaces, validated with your users before investing in development.", "d1": "User journeys", "d2": "Prototypes", "d3": "Design systems" },
+      "pm": { "signal": "MANAGEMENT", "title": "Project Design & Management", "text": "We transform an ambition into a roadmap and manage each step to maintain deadlines, quality, and value.", "d1": "Scoping", "d2": "Roadmap", "d3": "Project direction" },
+      "data": { "signal": "INTELLIGENCE", "title": "Data, Automation & AI", "text": "Pragmatic uses of data and artificial intelligence that accelerate decisions and repetitive tasks.", "d1": "Dashboards", "d2": "AI assistants", "d3": "Automated workflows" },
+      "commerce": { "signal": "GROWTH", "title": "Commerce & Platforms", "text": "Sales and service experiences that build trust, facilitate purchases, and grow with your business.", "d1": "E-commerce", "d2": "SaaS platforms", "d3": "Payments & integrations" }
+    },
+    "universeEdge": "EXPERTISE",
+    "processEyebrow": "Our way of working",
+    "processTitle": "A clear path,<br />from the first exchange<br /><em>to the first impact.</em>",
+    "processSteps": {
+      "s1": { "title": "We listen to you", "text": "We clarify what works, what blocks, and what the project really needs to change.", "output": "Shared vision" },
+      "s2": { "title": "We set the course", "text": "We transform your priorities into a simple, realistic, and shared action plan.", "output": "Roadmap" },
+      "s3": { "title": "We give it shape", "text": "You see and test the experience before the final build. Adjustments are made early.", "output": "Validated prototype" },
+      "s4": { "title": "We build together", "text": "We advance in visible steps, with regular demonstrations and clear language.", "output": "Proven solution" },
+      "s5": { "title": "We check everything", "text": "Every functional, visual, and technical detail is tested before going into production.", "output": "Controlled quality" },
+      "s6": { "title": "We launch and improve", "text": "We prepare your teams, track results, and evolve what needs to be.", "output": "Measured impact" }
+    },
+    "processFinish": "READY FOR TAKEOFF",
+    "processFinishStrong": "Your next advantage."
+  },
+  "Contact": {
+    "heroKicker": "Contact Us",
+    "heroTitle": "Do you have an ambition?",
+    "heroAccent": "Let's give it momentum.",
+    "heroCopy": "Tell us what you want to change. We will answer with useful questions, clear ideas, and a concrete next step.",
+    "infoEyebrow": "Let's start simply",
+    "infoTitle": "Let's talk about your<br /><em>next move.</em>",
+    "infoCopy": "A few lines are enough. No jargon necessary: tell us what is slowing you down today and what you would like to make possible tomorrow.",
+    "emailLabel": "E-MAIL",
+    "phoneLabel": "PHONE",
+    "locationLabel": "LOCATION",
+    "locationValue": "Yaoundé, Cameroon",
+    "replyLabel": "RESPONSE",
+    "replyValue": "Within 1 to 2 business days",
+    "formSuccessEyebrow": "Request recorded",
+    "formSuccessTitle": "Thank you. The conversation starts here.",
+    "formSuccessText": "Your request is ready. In this demonstration version, no email was sent.",
+    "formSuccessModify": "Edit my request",
+    "formNameLabel": "Your name",
+    "formNamePlaceholder": "What is your name?",
+    "formEmailLabel": "Your email",
+    "formEmailPlaceholder": "you@company.com",
+    "formCompanyLabel": "Your organization",
+    "formCompanyPlaceholder": "Name of your company or institution",
+    "formLegend": "What do you want to move forward on?",
+    "formOptions": {
+      "o1": "Web application",
+      "o2": "Mobile application",
+      "o3": "Business tool",
+      "o4": "UI/UX Design",
+      "o5": "Automation & AI",
+      "o6": "Consulting / scoping",
+      "o7": "Other"
+    },
+    "formMessageLabel": "Tell us about the project",
+    "formMessagePlaceholder": "The context, the goal, the schedule… whatever you think is useful.",
+    "formSubmit": "Send request",
+    "afterLabel": "After your message",
+    "afterTitle": "Simple, human,<br /><em>straightforward.</em>",
+    "afterSteps": {
+      "s1": { "title": "We listen to you", "text": "An exchange to understand the context, the people involved, and the expected result." },
+      "s2": { "title": "We clarify", "text": "We rephrase the need, priorities, and the best first step to move forward." },
+      "s3": { "title": "We propose a course", "text": "You receive a readable approach, scope, and collaboration path." }
+    },
+    "faqEyebrow": "Frequently asked questions",
+    "faqTitle": "Before<br /><em>starting.</em>",
+    "faqs": {
+      "q1": { "q": "What is the usual timeline for a project?", "a": "The duration depends on the ambition and scope. After an initial exchange, we propose clear steps, a realistic schedule, and a useful first result as early as possible." },
+      "q2": { "q": "Do you work with clients outside Cameroon?", "a": "Yes. Our organization is designed to collaborate effectively remotely, in Africa as well as internationally." },
+      "q3": { "q": "Can you take over an existing project?", "a": "Yes. We start with a simple diagnosis of the existing system, then recommend what should be kept, improved, or rethought." },
+      "q4": { "q": "Do you provide follow-up after launch?", "a": "Yes. We can support onboarding, track performance, fix friction points, and evolve the solution." }
+    },
+    "ctaEyebrow": "Do you prefer to write directly?",
+    "ctaButton": "Write an email"
+  }
+}
